@@ -1,0 +1,149 @@
+```
+npm install - установка зависимостей
+npm start - запуск продакшн
+```
+
+# Описание API
+
+Авторизация пользователя
+Content-type: applicatin/json
+POST api/auth/participant
+    body {
+      login: 'person-login'
+    }
+
+    200 {
+      success: true,
+      data: {
+        token: '5asd6f5as7d6...'
+      }
+    }
+
+Конференции
+    Получить список конференций
+    GET api/data/getconferences
+
+    Array [
+        Object {
+            "color": null,
+            "dateEnd": "2020-05-22T17:58:33.997Z",
+            "dateStart": "2020-05-18T00:00:00Z",
+            "id": "5e58039e491b9b000436e3a4",
+            "index": 0,
+            "name": "conference-name",
+            "place": "venue",
+            "sections": null,
+        },
+    ]
+
+    Получить список секций
+    GET api/data/getsections/${Id}
+    Id - id конференции
+
+    Array [
+        Object {
+            "conferenceId": "5e58039e491b9b000436e3a4",
+            "description": "description of the section",
+            "id": "5ee53070afdd944c7c906ce3",
+            "idInConference": 0,
+            "subsectionId": Array [
+                "5ee53093afdd944c7c906ce7",
+                "5ee53098afdd944c7c906ce8",
+                "5ee530a1afdd944c7c906ce9",
+                "5ee530aaafdd944c7c906cea",
+            ],
+        },
+    ]
+
+    Получить список подсекций
+    GET api/data/getsubsections/${Id}
+    Id - id секции
+
+    Array [
+        Object {
+            "description": "description of the subsection",
+            "id": "5ee53093afdd944c7c906ce7",
+            "idInSection": 0,
+            "reportsId": Array [
+                "5ef491f1a585a200042b2288",
+            ],
+            "sectionId": "5ee53070afdd944c7c906ce3",
+        },
+    ]
+
+Доклады
+    Получить список докладов
+    GET api/data/getReports/${id}
+    Id - id подсекции
+
+    Array [
+        Object {
+            "duration": 10,
+            "id": "5ef491f1a585a200042b2288",
+            "idInSubsection": 1,
+            "name": "Доклад 1",
+            "speakers": Array [
+                Object {
+                    "firstName": "Сергей",
+                    "id": 100010,
+                    "lastName": "Петров",
+                    "middleName": "Иванович",
+                    "userId": null,
+                },
+            ],
+            "subsectionId": null,
+        },
+    ]
+
+Новости
+    Получить список новостей
+    GET api/data/getNews
+
+    Array [
+        Object {
+            "author": "Сидоров С. С.",
+            "body": "Добавлен список докладов!",
+            "time": "2020-06-07T11:55:09.527Z",
+            "title": "Третья новость",
+        },
+    ]
+
+Профиль пользователя
+    Получить данные по профилю
+    GET api/data/getProfile/${Id}
+    Id - id пользователя
+
+    Object {
+        "firstName": "Иван",
+        "id": "5cf2d612a1c2864a6812f04a",
+        "isAuthorized": true,
+        "lastName": "Петров",
+        "middleName": "Алексеевич",
+        "userId": 100000,
+    }
+    
+QR-сканер
+    Подтвердить пристутсвие на конференции
+    Content-type: applicatin/json
+    POST api/auth/qr
+
+    body {
+      login: 'person-login'
+    }
+
+    200 {
+      success: OK,
+    }
+
+# Описание экранов
+
+    AuthenticationScreen - экран авторизации.
+    MainScreen - главный экран, на который пользователь переходит после авторизации. Содерит список конференций.
+    SectionScreen - экран со списоком секций.
+    SubSectionScreen - экран со списком подсекций.
+    ReportsScreen - экран со списком докладов.
+    ReportsDetailScreen - детальный экран выбранного доклада.
+    NewsScreen - экран новостей. Содержит список новостей.
+    ProfileScreen - экран профиля. Содержит информацию о пользователе.
+    QRScanerScreen - экран со QR-сканером.
+    RootScreen - корневой экран, содержащий настройку навигации.

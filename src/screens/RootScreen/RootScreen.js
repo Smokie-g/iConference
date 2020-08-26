@@ -8,7 +8,7 @@ export default class RootScreen extends PureComponent {
         return (
             <AppStack
                 ref={navigatorRef => {
-                NavigationService.setTopLevelNavigator(navigatorRef);
+                    NavigationService.setTopLevelNavigator(navigatorRef);
                 }}
             />
         );
