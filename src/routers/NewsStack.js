@@ -1,19 +1,18 @@
 import { createStackNavigator } from "react-navigation";
-import React from 'react';
 
 import { NewsScreen } from "../screens/NewsScreen";
 
 import { NEWS_SCREEN } from "../constants";
 
 const NewsStack = createStackNavigator(
-    {
-        [NEWS_SCREEN]: {
-            screen: NewsScreen
-        },
+  {
+    [NEWS_SCREEN]: {
+      screen: NewsScreen
     },
-    {
-        initialRoutname: NEWS_SCREEN,
-    }
+  },
+  {
+    initialRoutname: NEWS_SCREEN,
+  }
 );
 
 export default NewsStack;

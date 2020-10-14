@@ -6,6 +6,6 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = {};
 
 export const ReportsScreen = connect(
-    mapStateToProps,
-    mapDispatchToProps,
+  mapStateToProps,
+  mapDispatchToProps,
 )(ReportsScreenComponent);

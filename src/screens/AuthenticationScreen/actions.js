@@ -26,7 +26,7 @@ export const logIn = login => async (dispatch) => {
   //       userName: response.name,
   //     });
   //     break;
-  //   case false: 
+  //   case false:
   //     dispatch(setError({ error: "Server error" }));
   //     dispatch(logInFailure());
   //     break;
@@ -50,6 +50,5 @@ export const logIn = login => async (dispatch) => {
     dispatch(setError({ error: "wrong login" }));
     Alert.alert("Не корректные данные!");
     dispatch(logInFailure({ error }));
-    
   }
 };

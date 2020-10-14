@@ -8,8 +8,8 @@ export const TextInputComponent = styled.TextInput`
   font-size: ${moderateScale(16)};
   height: ${scale(37)};
   min-width: ${scale(305)};
-  border-bottom-width:${scale(1)};
-  border-bottom-color:${colors.background};
-  color:black;
+  border-bottom-width: ${scale(1)};
+  border-bottom-color: ${colors.background};
+  color: black;
   font-family: ${Platform.OS === 'ios' ? 'AvenirNext-Regular' : 'Roboto'};
 `;

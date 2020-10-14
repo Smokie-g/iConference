@@ -10,17 +10,17 @@ import { QRScanerScreen } from "../screens/QRScanerScreen";
 import { QR_SCANER_SCREEN } from "../constants";
 
 const ProfileStack = createStackNavigator(
-    {
-        [PROFILE_SCREEN]: {
-            screen: ProfileScreen
-        },
-        [QR_SCANER_SCREEN]: {
-            screen: QRScanerScreen
-        },
+  {
+    [PROFILE_SCREEN]: {
+      screen: ProfileScreen
     },
-    {
-        initialRoutname: PROFILE_SCREEN,
-    }
+    [QR_SCANER_SCREEN]: {
+      screen: QRScanerScreen
+    },
+  },
+  {
+    initialRoutname: PROFILE_SCREEN,
+  }
 );
 
 export default ProfileStack;

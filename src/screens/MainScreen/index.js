@@ -6,10 +6,10 @@ import { logOut } from "./actions";
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = {
-    logOut,
+  logOut,
 };
 
 export const MainScreen = connect(
-    mapStateToProps,
-    mapDispatchToProps,
+  mapStateToProps,
+  mapDispatchToProps,
 )(MainScreenComponent);

@@ -36,7 +36,7 @@ export default class ProfileScreen extends PureComponent {
     const token = await getUserToken();
     const userPresence = await getUserPresence();
     const Id = 100000;
-    
+
     const response = await getProfileNetworkRequest(Id, token);
     this.setState({ profileData: response, presence: userPresence });
   }
@@ -90,7 +90,10 @@ export default class ProfileScreen extends PureComponent {
         }
       >
         <View style={styles.avatarContainer}>
-          <Image style={scanned || presence ? styles.scanAvatar : styles.avatar} source={require("../../../assets/avatar.png")}/>
+          <Image
+            style={scanned || presence ? styles.scanAvatar : styles.avatar}
+            source={require("../../../assets/avatar.png")}
+          />
           {
             scanned || presence
             ? <Image style={styles.checkStyle} source={require("../../../assets/confirm.png")}/>
@@ -119,23 +122,23 @@ export default class ProfileScreen extends PureComponent {
               )
               : <Text style={styles.confirmTrueBtn}>Потдверждено!</Text>
             }
-              
+
           </View>
         </View>
         <View style={{ flexDirection: "row" }}>
           <Image
-              source={require("../../../assets/logout.png")}
-              style={styles.iconSettings}
+            source={require("../../../assets/logout.png")}
+            style={styles.iconSettings}
           />
-          <Button 
-              title="Выйти"
-              type="clear"
-              buttonStyle={{
-                marginBottom: 20,
-                marginLeft: Platform.OS==="android" ? 10 : 0,
-              }}
-              titleStyle={{ color: colors.headerSecondary }}
-              onPress={this.renderModalConfirm}
+          <Button
+            title="Выйти"
+            type="clear"
+            buttonStyle={{
+              marginBottom: 20,
+              marginLeft: Platform.OS==="android" ? 10 : 0,
+            }}
+            titleStyle={{ color: colors.headerSecondary }}
+            onPress={this.renderModalConfirm}
           />
         </View>
       </ScrollView>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image, TouchableOpacity,View } from 'react-native';
 import {colors} from '../constants/';
-export const ArrowButton = ({onPress}) => {
+export const ArrowButton = ({ onPress }) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -20,14 +20,12 @@ const styles = StyleSheet.create({
   settings: {
     width: 18,
     height: 13,
-    
   },
-  
   wrapper: {
-    width:60,
-    height:60,
-    backgroundColor:colors.headerSecondary,
-    borderRadius:30,
+    width: 60,
+    height: 60,
+    backgroundColor: colors.headerSecondary,
+    borderRadius: 30,
     alignItems: 'center',
     justifyContent:'center'
   }

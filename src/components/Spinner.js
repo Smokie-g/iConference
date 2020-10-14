@@ -12,7 +12,7 @@ const SpinnerWrapper = styled.View`
 `;
 
 export const Spinner = ({ size, color,backgroundColor }) => (
-  <SpinnerWrapper style={{backgroundColor:backgroundColor}}>
+  <SpinnerWrapper style={{ backgroundColor: backgroundColor }}>
     <ActivityIndicator size={size} color={color} />
   </SpinnerWrapper>
 );
@@ -26,5 +26,5 @@ Spinner.propTypes = {
 Spinner.defaultProps = {
   size: "large",
   color: colors.backgroundColorSecondary,
-  backgroundColor:colors.background
+  backgroundColor: colors.background
 };

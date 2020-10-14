@@ -8,5 +8,5 @@ import { colors } from '../../constants';
 export const TextInputErrorText = styled(BodyText)`
   font-size: ${moderateScale(14)};
   color: ${colors.textColorPrimary};
-  margin-top:${scale(5)};
+  margin-top: ${scale(5)};
 `;

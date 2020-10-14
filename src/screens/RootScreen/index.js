@@ -6,6 +6,6 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = {};
 
 export const RootScreen = connect(
-    mapStateToProps,
-    mapDispatchToProps,
+  mapStateToProps,
+  mapDispatchToProps,
 )(RootScreenComponent);

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BodyText } from "../BodyText";
 import { colors } from "../../constants";
 
-const getColor = ({ disabled, outlined, color, textColor,fontWeight,fontSize }) => {
+const getColor = ({ disabled, outlined, color, textColor }) => {
   if (disabled) {
     return colors.disabledButtonText;
   }
@@ -15,11 +15,11 @@ const getColor = ({ disabled, outlined, color, textColor,fontWeight,fontSize }) 
   return textColor;
 };
 
-const getFontWeight=({fontWeight})=>{
+const getFontWeight=({ fontWeight }) => {
   return fontWeight;
 };
 
-const getFontSize=({fontSize})=>{
+const getFontSize=({ fontSize }) => {
   return fontSize;
 };
 
@@ -27,5 +27,5 @@ export const ButtonText = styled(BodyText)`
   font-weight: ${getFontWeight};
   color: ${getColor};
   text-align: center;
-  font-size:${getFontSize};
+  font-size: ${getFontSize};
 `;

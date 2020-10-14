@@ -77,8 +77,8 @@ Button.propTypes = {
   color: PropTypes.string,
   textColor: PropTypes.string,
   type: PropTypes.string,
-  fontWeight:PropTypes.string,
-  fontSize:PropTypes.string,
+  fontWeight: PropTypes.string,
+  fontSize: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -91,6 +91,6 @@ Button.defaultProps = {
   color: colors.colorPrimary,
   textColor: colors.textColorPrimary,
   type: "primary",
-  fontWeight:"bold",
-  fontSize:"15"
+  fontWeight: "bold",
+  fontSize: "15"
 };

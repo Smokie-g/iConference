@@ -8,7 +8,7 @@ const IOS = styled.Text`
   flex: 1;
   text-align: left;
   font-size: 30;
-  margin-left:20;
+  margin-left: 20;
   color: ${colors.textColorPrimary};
 `;
 
@@ -16,9 +16,11 @@ const Android = styled.Text`
   flex: 1;
   text-align: left;
   font-size: 30;
-  margin-left:20;
+  margin-left: 20;
   color: ${colors.textColorPrimary};
 `;
 
 export const AuthHeader = ({ title }) =>
-  Platform.OS === "ios" ? <IOS numberOfLines={2} elliosizeMode={'tail'}>{title}</IOS> : <Android>{title}</Android>;
+  Platform.OS === "ios"
+    ? <IOS numberOfLines={2} elliosizeMode={'tail'}>{title}</IOS>
+    : <Android>{title}</Android>;

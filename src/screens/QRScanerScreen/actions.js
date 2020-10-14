@@ -16,7 +16,6 @@ export const checkPresence = (value) => async dispatch => {
 
   try {
     const response = await PresenceCheckNetworkRequest(value, token);
-    console.log(response);
     dispatch(CheckPresenceSuccess("OK"));
     await saveUserPresence("OK");
   } catch(e) {

@@ -6,16 +6,15 @@ import AuthenticationStack from "./AuthenticationsStack";
 import { TAB_NAVIGATOR, AUTHENTICATION_STACK } from "../constants";
 
 const root = createSwitchNavigator(
-    {
-      [AUTHENTICATION_STACK]: {
-        screen: AuthenticationStack
-      },
-      [TAB_NAVIGATOR]: {
-        screen: TabNavigator
-      },
+  {
+    [AUTHENTICATION_STACK]: {
+      screen: AuthenticationStack
     },
-    {}
-  );
-  
-  export default createAppContainer(root);
-  
+    [TAB_NAVIGATOR]: {
+      screen: TabNavigator
+    },
+  },
+  {}
+);
+
+export default createAppContainer(root);

@@ -18,12 +18,11 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     marginLeft: 25,
-    marginBottom:Platform.OS==="ios" ? 20 : 0,
+    marginBottom: Platform.OS === "ios" ? 20 : 0,
     tintColor: "white",
   },
   iosHeaderCenter: {
     height: "100%",
     alignItems: "center",
-
-  }
+  },
 });
